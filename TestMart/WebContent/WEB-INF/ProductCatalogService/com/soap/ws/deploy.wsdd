@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ProductCatalogService WSDL service -->
+
+  <service name="ProductCatalog" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://ws.soap.com"/>
+      <parameter name="wsdlServiceElement" value="ProductCatalogService"/>
+      <parameter name="schemaQualified" value="http://ws.soap.com"/>
+      <parameter name="wsdlServicePort" value="ProductCatalog"/>
+      <parameter name="className" value="com.soap.ws.ProductCatalog"/>
+      <parameter name="wsdlPortType" value="ProductCatalog"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://ws.soap.com" xmlns:retNS="http://ws.soap.com" xmlns:rtns="http://ws.soap.com" xmlns:tns="http://ws.soap.com" name="getProducts" qname="operNS:getProducts" returnQName="retNS:getProductsReturn" returnType="rtns:ArrayOf_xsd_anyType" returnItemQName="tns:item" soapAction="">
+        <parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" xmlns:pns="http://ws.soap.com" qname="pns:category" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://ws.soap.com" xmlns:retNS="http://ws.soap.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="addProduct" qname="operNS:addProduct" returnQName="retNS:addProductReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://ws.soap.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:category" type="tns:string"/>
+        <parameter xmlns:pns="http://ws.soap.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:product" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://ws.soap.com" xmlns:retNS="http://ws.soap.com" xmlns:rtns="http://ws.soap.com" xmlns:tns="http://ws.soap.com" name="getProductCategories" qname="operNS:getProductCategories" returnQName="retNS:getProductCategoriesReturn" returnType="rtns:ArrayOf_xsd_anyType" returnItemQName="tns:item" soapAction="">
+      </operation>
+      <parameter name="allowedMethods" value="addProduct getProductCategories getProducts"/>
+
+      <typeMapping xmlns:ns="http://ws.soap.com" qname="ns:&gt;addProductResponse" type="java:com.soap.ws.AddProductResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://ws.soap.com" qname="ns:&gt;addProduct" type="java:com.soap.ws.AddProduct" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://ws.soap.com" qname="ns:&gt;getProductCategoriesResponse" type="java:com.soap.ws.GetProductCategoriesResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://ws.soap.com" qname="ns:&gt;getProducts" type="java:com.soap.ws.GetProducts" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://ws.soap.com" qname="ns:&gt;getProductsResponse" type="java:com.soap.ws.GetProductsResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <arrayMapping xmlns:ns="http://ws.soap.com" xmlns:cmp-ns="http://www.w3.org/2001/XMLSchema" qname="ns:ArrayOf_xsd_anyType" type="java:java.lang.Object[]" innerType="cmp-ns:anyType" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://ws.soap.com" qname="ns:&gt;getProductCategories" type="java:com.soap.ws.GetProductCategories" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+  </service>
+</deployment>

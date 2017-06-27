@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="net.webservicex.GeoIPService"/>
+<fullyQualifiedTypeName name="net.webservicex.GeoIPServiceSoap"/>
+<fullyQualifiedTypeName name="net.webservicex.GeoIP"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.soap.ws.service.ProductService"/>
+<fullyQualifiedTypeName name="com.soap.ws.service.ProductServiceImpl"/>
+<fullyQualifiedTypeName name="javax.jws.WebParam"/>
+<fullyQualifiedTypeName name="javax.jws.WebMethod"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.soap.ws.model.Product"/>
+<fullyQualifiedTypeName name="javax.jws.soap.SOAPBinding"/>
+<fullyQualifiedTypeName name="javax.jws.WebService"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlRootElement"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlType"/>
+<fullyQualifiedTypeName name="com.sun.xml.internal.txw2.annotation.XmlElement"/>
+<fullyQualifiedTypeName name="com.sun.xml.txw2.annotation.XmlElement"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlElement"/>
+<fullyQualifiedTypeName name="javax.jws.WebResult"/>
+<fullyQualifiedTypeName name="javax.websocket.Endpoint"/>
+<fullyQualifiedTypeName name="javax.xml.ws.Endpoint"/>
+<fullyQualifiedTypeName name="com.soap.ws.ProductCatalog"/>
+<fullyQualifiedTypeName name="com.soap.ws.ProductCatalogInterface"/>
+</qualifiedTypeNameHistroy>

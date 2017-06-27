@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="1" glassfish.adminname="admin" glassfish.adminserverportnumber="4848" glassfish.domainpath="D:\glassfish4\glassfish\domains\mydomain" glassfish.jarDeploy="true" glassfish.keepSessions="true" glassfish.serverportnumber="52005" glassfish.useAnonymousConnection="true" hostname="localhost" id="GlassFish at localhost [mydomain]" name="GlassFish at localhost [mydomain]" runtime-id="GlassFish 4" server-type="glassfish.server" server-type-id="glassfish.server" start-timeout="240" stop-timeout="240" timestamp="21">
+    <list key="modules" value0="TestMart::org.eclipse.jst.jee.server:TestMart::jst.web::3.1"/>
+  </server>
+</servers>
